@@ -7,7 +7,7 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrollBg, setScrollBg] = useState(false);
   const userData = useUserData();
-  console.log(userData);
+
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
