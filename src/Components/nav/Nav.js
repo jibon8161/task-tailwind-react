@@ -27,10 +27,10 @@ const Nav = () => {
   return (
     <div
       id="home"
-      className="hero min-h-screen"
+      className="hero min-h-screen bg-cover"
       style={{
         backgroundImage:
-          "url(https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_960_720.jpg)",
+          "url(https://img.freepik.com/free-photo/programming-background-concept_23-2150170124.jpg?t=st=1711448680~exp=1711452280~hmac=8f7fcbec148a0c86f8cd4b79225795b8d9c7e90fc12e23ba7a4dd897f21ee721&w=1380)",
       }}
     >
       <div className="hero-overlay bg-opacity-60">
@@ -53,7 +53,7 @@ const Nav = () => {
               <div className="container px-6 py-3 mx-auto text-orange-500">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center">
                   <div className="flex items-center justify-between ">
-                    <p className="md:hidden block">Portfolio</p>
+                    <p className="md:hidden block text-2xl">Portfolio</p>
                     <div className="hidden md:block">
                       <div className="flex gap-10 ">
                         <div className="flex items-center gap-2 ">
@@ -96,7 +96,7 @@ const Nav = () => {
                         {!isOpen ? (
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="w-6 h-6"
+                            className="w-7 h-7 text-white"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -111,7 +111,7 @@ const Nav = () => {
                         ) : (
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
-                            className="w-6 h-6"
+                            className="w-7 h-7 text-white"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -165,7 +165,7 @@ const Nav = () => {
                   </div>
                 </div>
 
-                <div className=" py-3 mt-3 -mx-3 overflow-y-auto whitespace-nowrap scroll-hidden hidden md:block animate__animated animate__fadeInLeft animate__slower	3s text-white">
+                <div className=" py-3 mt-3 -mx-3 overflow-y-auto whitespace-nowrap scroll-hidden hidden md:block animate__animated animate__fadeInLeft animate__slower	3s text-white font-semibold">
                   <ul className=" grid md:grid-cols-9 lg:grid-cols-12 lg:ml-60 items-center md:gap-5  lg:gap-0 mt-5  ">
                     <li>
                       <HashLink
@@ -255,30 +255,19 @@ const Nav = () => {
           </div>
         </div>
       </div>
-      <div className="hero-content  text-white text-left ">
-        <div className="">
-          <p className="md:text-3xl hover:text-orange-500 animate__animated animate__fadeInLeft animate__slower	3s">
+      <div className="hero-content text-left text-neutral-content">
+        <div className="lg:w-full max-w-md ">
+          <p className="mb-5 text-2xl text-orange-500 animate__animated animate__fadeInLeft animate__slower	3s">
             {userData?.user?.about?.title} <br />
           </p>
-          <p className="md:text-3xl mt-2 mb-4 hover:text-orange-500 animate__animated animate__fadeInRight animate__slower	3s">
-            {" "}
+          <p className="mb-5 text-2xl text-orange-500 animate__animated animate__fadeInLeft animate__slower	3s">
             {userData?.user?.about?.exp_year} Years of Experience
           </p>
 
-          <h1 className="mb-5 md:text-8xl text-3xl font-bold hover:text-orange-500 animate__animated animate__fadeInLeft animate__slower	3s subpixel-antialiased ">
+          <h1 className="mb-5 text-5xl font-bold">
+            {" "}
             {userData?.user?.about?.quote}
           </h1>
-          <div className="hidden md:block hover:text-orange-500 animate__animated animate__zoomIn  ">
-            <ul className="flex gap-4 mb-5 list-disc list-inside  ">
-              <li>Design</li>
-              <li>Marketing</li>
-              <li>Development</li>
-            </ul>
-          </div>
-
-          <button className="btn bg-orange-600 animate__animated animate__backInUp animate__slower">
-            Contact me
-          </button>
         </div>
       </div>
     </div>

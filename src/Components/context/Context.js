@@ -4,8 +4,8 @@ const UserDataContext = createContext();
 
 const Loader = () => {
   return (
-    <div class="relative flex justify-center items-center min-h-screen">
-      <div class="absolute animate-spin rounded-full h-32 w-32 border-t-4 border-b-4 border-purple-500"></div>
+    <div class="relative flex justify-center items-center min-h-screen bg-black">
+      <div class="absolute animate-spin rounded-full  border-t-4 border-b-4 border-purple-500"></div>
       <img
         alt="loader"
         src="https://www.svgrepo.com/show/509001/avatar-thinking-9.svg"
