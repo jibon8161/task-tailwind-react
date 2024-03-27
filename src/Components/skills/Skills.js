@@ -23,50 +23,55 @@ const Skills = () => {
   console.log("User Skills:", sortedSkills); // Debugging statement
 
   return (
-    <div className="max-w-full mx-auto p-4 mt-16 md:max-w-xl">
-      <h4 className="text-3xl md:text-5xl dark:text-white font-bold mb-6">
-        Skills
-      </h4>
-      {sortedSkills.map((skill, index) => (
-        <div key={index} className="mb-7">
-          <div className="flex justify-between py-1">
-            <span className="text-base text-gray-lite font-semibold dark:text-[#A6A6A6]">
-              {skill.name}
-            </span>
-            <span className="text-base font-semibold text-gray-lite pr-5 dark:text-[#A6A6A6]">
-              {skill.percentage}%
-            </span>
+    <div>
+      <div className="divider mt-12"></div>
+      <div className="max-w-full mx-auto p-4 mt-8 md:max-w-xl">
+        <h1 className="text-3xl underline font-serif mb-6 mt-8">SKILLS</h1>
+        <h1 className="text-4xl mb-8 ">
+          Discover My Expertise and Proficiency
+        </h1>
+
+        {sortedSkills.map((skill, index) => (
+          <div key={index} className="mb-7">
+            <div className="flex justify-between py-1">
+              <span className="text-base text-gray-lite font-semibold dark:text-[#A6A6A6]">
+                {skill.name}
+              </span>
+              <span className="text-base font-semibold text-gray-lite pr-5 dark:text-[#A6A6A6]">
+                {skill.percentage}%
+              </span>
+            </div>
+            <svg
+              className="rc-progress-line"
+              viewBox="0 0 100 1"
+              preserveAspectRatio="none"
+            >
+              <path
+                className="rc-progress-line-trail"
+                d="M 0.5,0.5 L 99.5,0.5"
+                strokeLinecap="round"
+                stroke="#D9D9D9"
+                strokeWidth="1"
+                fillOpacity="0"
+              ></path>
+              <path
+                className="rc-progress-line-path"
+                d="M 0.5,0.5 L 99.5,0.5"
+                strokeLinecap="round"
+                stroke={getColor(skill.name)}
+                strokeWidth="1"
+                fillOpacity="0"
+                style={{
+                  strokeDasharray: "lg:w-full", // Full width for large (lg) devices
+                  strokeDashoffset: "0px",
+                  transition:
+                    "stroke-dashoffset 0.3s ease 0s, stroke-dasharray 0.3s ease 0s, stroke 0.3s linear 0s, 0.06s",
+                }}
+              ></path>
+            </svg>
           </div>
-          <svg
-            className="rc-progress-line"
-            viewBox="0 0 100 1"
-            preserveAspectRatio="none"
-          >
-            <path
-              className="rc-progress-line-trail"
-              d="M 0.5,0.5 L 99.5,0.5"
-              strokeLinecap="round"
-              stroke="#D9D9D9"
-              strokeWidth="1"
-              fillOpacity="0"
-            ></path>
-            <path
-              className="rc-progress-line-path"
-              d="M 0.5,0.5 L 99.5,0.5"
-              strokeLinecap="round"
-              stroke={getColor(skill.name)}
-              strokeWidth="1"
-              fillOpacity="0"
-              style={{
-                strokeDasharray: "lg:w-full",
-                strokeDashoffset: "0px",
-                transition:
-                  "stroke-dashoffset 0.3s ease 0s, stroke-dasharray 0.3s ease 0s, stroke 0.3s linear 0s, 0.06s",
-              }}
-            ></path>
-          </svg>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
