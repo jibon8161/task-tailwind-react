@@ -24,7 +24,7 @@ const Projects = () => {
 
   // Total number of projects after filtering
   const totalProjects = filteredProjects ? filteredProjects.length : 0;
-
+  console.log(useState.user);
   return (
     <div id="portfolio">
       <div className="divider"></div>
