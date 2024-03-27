@@ -7,13 +7,13 @@ const Testimonial = () => {
 
   const handlePrev = () => {
     setIndex((prevIndex) =>
-      prevIndex === 0 ? userData.user.testimonials.length - 1 : prevIndex - 1
+      prevIndex === 0 ? userData?.user?.testimonials?.length - 1 : prevIndex - 1
     );
   };
 
   const handleNext = () => {
     setIndex((prevIndex) =>
-      prevIndex === userData.user.testimonials.length - 1 ? 0 : prevIndex + 1
+      prevIndex === userData?.user?.testimonials?.length - 1 ? 0 : prevIndex + 1
     );
   };
   console.log(userData?.user);
@@ -44,7 +44,7 @@ const Testimonial = () => {
 
                   <div className="mt-2 md:mx-6 ">
                     <div>
-                      <p className="text-xl font-medium tracking-tight text-white font-serif">
+                      <p className="text-xl font-medium tracking-tight text-white font-serif ">
                         {userData?.user?.testimonials[index]?.name}
                       </p>
                       <p className="text-white ">

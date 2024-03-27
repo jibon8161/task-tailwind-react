@@ -236,15 +236,7 @@ const Nav = () => {
                         Timeline
                       </HashLink>
                     </li>
-                    <li>
-                      <HashLink
-                        className="hover:text-orange-500"
-                        smooth
-                        to="#price"
-                      >
-                        Price
-                      </HashLink>
-                    </li>
+
                     <li>
                       <HashLink
                         className="hover:text-orange-500"
