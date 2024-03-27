@@ -7,7 +7,7 @@ const Contact = () => {
       <section class="bg-white dark:bg-gray-900">
         <div class="container px-6 py-12 mx-auto">
           <div>
-            <p class="font-medium text-blue-500 dark:text-blue-400">
+            <p class="font-medium text-orange-500 dark:text-blue-400">
               Contact Me
             </p>
 
@@ -20,7 +20,7 @@ const Contact = () => {
           <div class="grid grid-cols-1 gap-12 mt-10 lg:grid-cols-2">
             <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
               <div>
-                <span class="inline-block p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
+                <span class="inline-block p-3 text-orange-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -43,13 +43,13 @@ const Contact = () => {
                 <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
                   I am here to help you.
                 </p>
-                <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">
+                <p class="mt-2 text-sm text-orange-500 dark:text-blue-400">
                   jibon2230@gmail.com
                 </p>
               </div>
 
               <div>
-                <span class="inline-block p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
+                <span class="inline-block p-3 text-orange-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -77,13 +77,13 @@ const Contact = () => {
                 <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
                   I am here to help you.
                 </p>
-                <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">
+                <p class="mt-2 text-sm text-orange-500 dark:text-blue-400">
                   Start new chat
                 </p>
               </div>
 
               <div>
-                <span class="inline-block p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
+                <span class="inline-block p-3 text-orange-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -111,13 +111,13 @@ const Contact = () => {
                 <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
                   Come say hello at My office HQ.
                 </p>
-                <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">
+                <p class="mt-2 text-sm text-orange-500 dark:text-blue-400">
                   100 Smith Street Collingwood VIC 3066 AU
                 </p>
               </div>
 
               <div>
-                <span class="inline-block p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
+                <span class="inline-block p-3 text-orange-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -140,7 +140,7 @@ const Contact = () => {
                 <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
                   Mon-Fri from 8am to 5pm.
                 </p>
-                <p class="mt-2 text-sm text-blue-500 dark:text-blue-400">
+                <p class="mt-2 text-sm text-orange-500 dark:text-blue-400">
                   +88 (01) 717438161
                 </p>
               </div>
@@ -193,7 +193,7 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
-                <button class="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                <button class="antialiased mt-6 block w-full select-none rounded-lg bg-orange-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-black shadow-md shadow-black transition-all hover:shadow-lg hover:shadow-black focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
                   Send message
                 </button>
               </form>

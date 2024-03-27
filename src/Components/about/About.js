@@ -1,6 +1,7 @@
 import React from "react";
 import { useUserData } from "../context/Context";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const About = () => {
   const userData = useUserData();
@@ -26,14 +27,15 @@ const About = () => {
             <p className="text-sm text-gray-600 mt-7">
               {userData?.user?.about?.description}
             </p>
-            <Link
-              to=""
+            <HashLink
+              smooth
+              to="#Contact"
               className="antialiased mt-6 block w-full select-none rounded-lg bg-orange-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-black shadow-md shadow-black transition-all hover:shadow-lg hover:shadow-black focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               type="button"
               data-ripple-light="true"
             >
               Contact Me
-            </Link>
+            </HashLink>
           </div>
         </div>
       </div>
