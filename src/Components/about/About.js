@@ -1,6 +1,5 @@
 import React from "react";
 import { useUserData } from "../context/Context";
-import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 const About = () => {

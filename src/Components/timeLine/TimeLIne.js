@@ -26,7 +26,7 @@ const TimeLine = () => {
           Highlights of Career Milestones
         </h1>
 
-        {/* Toggle Button */}
+     
         <button
           onClick={toggleSections}
           className="antialiased mt-6 block w-full select-none rounded-lg bg-orange-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-black shadow-md shadow-black transition-all hover:shadow-lg hover:shadow-black focus:opacity-[0.85]  active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none mb-5"
@@ -34,7 +34,7 @@ const TimeLine = () => {
           {showEducation ? "Show Experience" : "Show Education"}
         </button>
 
-        {/* Render Timeline */}
+       
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 ">
           {userData?.user?.timeline?.map((item, index) => {
             if (
@@ -44,7 +44,7 @@ const TimeLine = () => {
               return (
                 <div
                   key={index}
-                  className="max-w-2xl px-8 py-4 bg-white rounded-lg shadow-md dark:bg-gray-800 text-left hover:shadow-2xl hover:shadow-orange-500 hover:animate-pulse"
+                  className="max-w-2xl px-8 py-4 bg-white rounded-lg shadow-md shadow-black dark:bg-gray-800 text-left hover:shadow-2xl hover:shadow-orange-500 hover:animate-pulse "
                 >
                   <div className="flex flex-col sm:flex-row items-center justify-between">
                     <p className="mb-3 sm:mb-0 font-semibold">

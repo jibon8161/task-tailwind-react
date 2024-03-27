@@ -5,24 +5,24 @@ const Projects = () => {
   const userData = useUserData();
   const [filter, setFilter] = useState(null);
 
-  // Define a function to handle filtering
+  
   const handleFilter = (techStack) => {
     setFilter(techStack);
   };
 
-  // Filtered projects based on the current filter value
+
   const filteredProjects = filter
     ? userData?.user?.projects?.filter((project) =>
         project.techStack.some((tech) => tech.trim() === filter)
       )
     : userData?.user?.projects;
 
-  // Reverse the order of filtered projects only
+  
   const reversedProjects = filteredProjects
     ? filteredProjects.slice().reverse()
     : [];
 
-  // Total number of projects after filtering
+ 
   const totalProjects = filteredProjects ? filteredProjects.length : 0;
 
   return (
@@ -34,7 +34,7 @@ const Projects = () => {
           <span className="text-info">{userData?.user?.about?.some_total}</span>
           projects completed! 🚀 Excited to share a glimpse of a few of them!
         </h1>
-        {/* Filter buttons */}
+       
         <p className="text-left mt-12 mb-4 text-2xl font-bold">
           Showing Result: {totalProjects}
         </p>
@@ -75,9 +75,9 @@ const Projects = () => {
           >
             TailwindCSS
           </button>
-          {/* Add more buttons for other tech stacks */}
+        
         </div>
-        {/* Render filtered projects */}
+      
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
           {reversedProjects?.map((project, index) => (
             <div
@@ -94,7 +94,7 @@ const Projects = () => {
               <div className="card-body hover:shadow-2xl hover:shadow-orange-500 ">
                 <h2 className="card-title ">{project.title}</h2>
                 <p></p>
-                {/* Use unique IDs for each modal dialog */}
+              
                 <dialog id={`my_modal_${index}`} className="modal">
                   <div className="modal-box w-11/12 max-w-5xl">
                     <div className="card w-full bg-base-100 shadow-xl image-full">

@@ -11,7 +11,6 @@ function App() {
     <div className="App">
       <UserDataProvider>
         <RouterProvider router={router}>
-          {/* Your App content goes here */}
         </RouterProvider>
       </UserDataProvider>
     </div>

@@ -2,17 +2,15 @@ import React from "react";
 import { useUserData } from "../context/Context";
 
 const Skills = () => {
-  const userData = useUserData(); // Fetch userData using custom hook
+  const userData = useUserData(); 
 
-  // Sort the skills array based on the percentage (ascending order)
+
   const sortedSkills = userData?.user?.skills.sort(
     (a, b) => a.percentage - b.percentage
   );
 
   const getColor = (name) => {
-    // Derive color dynamically based on skill name
-    // You can implement your own logic here
-    // This is just a placeholder
+  
     const hash = name
       .split("")
       .reduce((acc, char) => char.charCodeAt(0) + acc, 0);
@@ -60,7 +58,7 @@ const Skills = () => {
                 strokeWidth="1"
                 fillOpacity="0"
                 style={{
-                  strokeDasharray: "lg:w-full", // Full width for large (lg) devices
+                  strokeDasharray: "lg:w-full", 
                   strokeDashoffset: "0px",
                   transition:
                     "stroke-dashoffset 0.3s ease 0s, stroke-dasharray 0.3s ease 0s, stroke 0.3s linear 0s, 0.06s",

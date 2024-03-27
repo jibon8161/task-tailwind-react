@@ -30,7 +30,7 @@ const Nav = () => {
       className="hero min-h-screen bg-cover"
       style={{
         backgroundImage:
-          "url(https://img.freepik.com/free-photo/programming-background-concept_23-2150170124.jpg?t=st=1711448680~exp=1711452280~hmac=8f7fcbec148a0c86f8cd4b79225795b8d9c7e90fc12e23ba7a4dd897f21ee721&w=1380)",
+          "url(https://images.pexels.com/photos/5926397/pexels-photo-5926397.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)",
       }}
     >
       <div className="hero-overlay bg-opacity-60">
@@ -91,7 +91,7 @@ const Nav = () => {
                       )}
                     </div>
 
-                    {/* Mobile menu button */}
+                   
                     <div className="flex md:hidden">
                       <button
                         onClick={() => setIsOpen(!isOpen)}
@@ -134,7 +134,7 @@ const Nav = () => {
                     </div>
                   </div>
 
-                  {/* Mobile Menu open: "block", Menu closed: "hidden" */}
+                 
                   <div
                     className={`${
                       isOpen
@@ -142,7 +142,7 @@ const Nav = () => {
                         : "opacity-0 -translate-x-full"
                     } absolute inset-x-0 z-20 w-full px-6 py-2 transition-all duration-300 ease-in-out bg-white top-24 dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center`}
                   >
-                    {/* Search input on mobile screen */}
+                   
                     <div className="my-4 md:hidden">
                       <div className="relative">
                         <ul

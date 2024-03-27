@@ -10,7 +10,6 @@ import Contact from "../contact/Contact";
 const Home = () => {
   return (
     <div className="">
-      {/* about section start */}
       <About></About>
       <Services></Services>
       <Projects></Projects>

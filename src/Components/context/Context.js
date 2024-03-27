@@ -4,15 +4,15 @@ const UserDataContext = createContext();
 
 const Loader = () => {
   return (
-    <div class="relative flex justify-center items-center min-h-screen bg-black">
-      <div class="absolute animate-spin rounded-full  border-t-4 border-b-4 border-purple-500"></div>
+    <div className="relative flex justify-center items-center h-screen">
+      <div className="absolute animate-spin rounded-full h-32 w-32 border-t-4 border-b-4 border-purple-500"></div>
       <img
-        alt="loader"
         src="https://www.svgrepo.com/show/509001/avatar-thinking-9.svg"
-        class="rounded-full h-28 w-28"
+        className="rounded-full h-28 w-28"
+        alt=""
       />
     </div>
-  ); // You can customize this loader as needed
+  ); 
 };
 
 export const UserDataProvider = ({ children }) => {
@@ -26,21 +26,21 @@ export const UserDataProvider = ({ children }) => {
       .then((response) => response.json())
       .then((data) => {
         setUserData(data);
-        setLoading(false); // Set loading to false once data is fetched
+        setLoading(false); 
       })
       .catch((error) => {
         console.error("Error fetching user data:", error);
-        setLoading(false); // Set loading to false if there's an error
+        setLoading(false); 
       });
 
     return () => {
-      // Cleanup
+    
     };
   }, []);
 
-  // Render loader if data is still loading
+ 
   if (loading) {
-    return <Loader />; // Use the Loader component here
+    return <Loader />; 
   }
 
   return (
