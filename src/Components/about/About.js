@@ -7,8 +7,8 @@ const About = () => {
 
   return (
     <div>
-      <div className="divider"></div>
-      <div id="About" className="container mx-auto mt-8 mb-8">
+      <div id="About" className="divider"></div>
+      <div className="container mx-auto mt-8 mb-8">
         <div className="md:flex justify-around items-center">
           <img
             className="w-96 rounded-lg mx-auto md:mx-0 mb-4 md:mb-0 p-2"

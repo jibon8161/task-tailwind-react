@@ -54,35 +54,41 @@ const Nav = () => {
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center">
                   <div className="flex items-center justify-between ">
                     <p className="md:hidden block text-2xl">Portfolio</p>
-                    <div className="hidden md:block">
-                      <div className="flex gap-10 ">
-                        <div className="flex items-center gap-2 ">
-                          <Link className="border border-black rounded-md p-2  hover:animate-pulse shadow-md shadow-black">
-                            {userData?.user?.about?.name}
-                          </Link>
-                          <Link className="border border-black rounded-md p-2 hover:animate-pulse shadow-md shadow-black">
-                            {userData?.user?.about?.phoneNumber}
-                          </Link>
-                          <Link className="border border-black rounded-md p-2 hover:animate-pulse shadow-md shadow-black">
-                            {userData?.user?.about?.address}
-                          </Link>
+                    <div
+                      className={`hidden md:block ${scrollBg ? "hide" : ""}`}
+                    >
+                      {!scrollBg && (
+                        <div className="flex gap-10">
+                          <div className="flex items-center gap-2">
+                            <Link className="border border-black rounded-md p-2 hover:animate-pulse shadow-md shadow-black">
+                              {userData?.user?.about?.name}
+                            </Link>
+                            <Link className="border border-black rounded-md p-2 hover:animate-pulse shadow-md shadow-black">
+                              {userData?.user?.about?.phoneNumber}
+                            </Link>
+                            <Link className="border border-black rounded-md p-2 hover:animate-pulse shadow-md shadow-black">
+                              {userData?.user?.about?.address}
+                            </Link>
+                          </div>
+                          <div className="flex flex-col md:flex-row md:mx-1 gap-5">
+                            {userData?.user?.social_handles.map(
+                              (icon, index) => (
+                                <div
+                                  className="p-1 hover:bg-black rounded-full border-orange-500 shadow-lg shadow-black"
+                                  key={index}
+                                >
+                                  <img
+                                    title={icon?.platform}
+                                    className="w-8"
+                                    src={icon?.image?.url}
+                                    alt=""
+                                  />
+                                </div>
+                              )
+                            )}
+                          </div>
                         </div>
-                        <div className="flex flex-col md:flex-row md:mx-1 gap-5">
-                          {userData?.user?.social_handles.map((icon, index) => (
-                            <div
-                              className=" p-1 hover:bg-black rounded-full  border-orange-500 shadow-lg shadow-black"
-                              key={index}
-                            >
-                              <img
-                                title={icon?.platform}
-                                className="w-8"
-                                src={icon?.image?.url}
-                                alt=""
-                              />
-                            </div>
-                          ))}
-                        </div>
-                      </div>
+                      )}
                     </div>
 
                     {/* Mobile menu button */}
