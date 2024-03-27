@@ -20,10 +20,8 @@ const Skills = () => {
     return `hsl(${hue}, 70%, 50%)`;
   };
 
-  console.log("User Skills:", sortedSkills); // Debugging statement
-
   return (
-    <div>
+    <div id="team">
       <div className="divider mt-12"></div>
       <div className="max-w-full mx-auto p-4 mt-8 md:max-w-xl">
         <h1 className="text-3xl underline font-serif mb-6 mt-8">SKILLS</h1>

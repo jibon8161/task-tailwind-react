@@ -24,10 +24,10 @@ const Projects = () => {
 
   // Total number of projects after filtering
   const totalProjects = filteredProjects ? filteredProjects.length : 0;
-  console.log(useState.user);
+
   return (
-    <div id="portfolio">
-      <div className="divider"></div>
+    <div>
+      <div id="portfolio" className="divider"></div>
       <div className="container mx-auto">
         <h1 className="text-3xl underline font-serif mb-4 mt-8">PORTFOLIO</h1>
         <h1 className="text-4xl">
